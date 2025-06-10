@@ -1,0 +1,25 @@
+site_name: ED3N Hydro Boards
+site_url: https://cajun1689.github.io/ed3n/
+repo_url: https://github.com/cajun1689/ed3n
+
+theme:
+  name: material
+  palette:
+    scheme: slate     # dark
+    primary: teal
+
+plugins:
+  - search
+ # - i18n:
+    #  default_language: en
+
+nav:
+  - Home: index.md
+
+  - Boards:
+      - Hydro Lite: boards/hydro-lite.md
+      - Hydro: boards/hydro.md
+      - Hydro Pro: boards/hydro-pro.md
+
+  - Tested Accessories: tested-accessories.md
+  - Tested Software: tested-software.md
