@@ -12,8 +12,8 @@ plugins:
   - search
   - i18n:
       default_language: en
-	languages:
-	  en: English
+        languages:
+          en: English
 
 nav:
   - Home: index.md
