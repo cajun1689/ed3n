@@ -10,8 +10,8 @@ theme:
 
 plugins:
   - search
- # - i18n:
-    #  default_language: en
+  - i18n:
+      default_language: en
 
 nav:
   - Home: index.md
