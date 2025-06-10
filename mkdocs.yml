@@ -5,15 +5,11 @@ repo_url: https://github.com/cajun1689/ed3n
 theme:
   name: material
   palette:
-    scheme: slate     # dark
+    scheme: slate     # dark mode
     primary: teal
 
 plugins:
-  - search
-  - i18n:
-      default_language: en
-        languages:
-          en: English
+  - search            # only the built-in search plugin
 
 nav:
   - Home: index.md
