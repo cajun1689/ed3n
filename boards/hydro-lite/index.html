@@ -299,6 +299,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Hydro Lite
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -310,6 +323,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schematic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumper-settings-i2c-pull-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jumper Settings – I²C Pull-ups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials (BOM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-test-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly &amp; Test Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revision History
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -433,6 +519,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schematic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumper-settings-i2c-pull-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jumper Settings – I²C Pull-ups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bill of Materials (BOM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-test-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly &amp; Test Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revision History
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -451,7 +599,144 @@
 
 
 <h1 id="hydro-lite">Hydro Lite</h1>
-<p>(coming soon)</p>
+<p>A low-cost, two-channel control board for small hydroponic builds.<br />
+Supports <strong>12 V pumps</strong>, <strong>analog I²C sensors</strong>, and optional
+pull-up resistors on the SDA/SCL lines (see <em>Jumper Settings</em> below).</p>
+<p>!!! tip "Quick links"
+    * <a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">Schematic PDF</a>{:target="_blank"}
+    * <a href="https://jlcpcb.com/partdetail/...">Purchase on JLCPCB</a> <em>(coming soon)</em></p>
+<hr />
+<h2 id="features">Features</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MCU</td>
+<td>ATtiny1624 @ 16 MHz (Optiboot)</td>
+</tr>
+<tr>
+<td>Power input</td>
+<td>9 – 15 V DC barrel</td>
+</tr>
+<tr>
+<td>Outputs</td>
+<td>2 × MOSFET (5 A max each)</td>
+</tr>
+<tr>
+<td>I²C header</td>
+<td>3-pin JST-PH (3.3 V logic)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="schematic">Schematic</h2>
+<p><img alt="Hydro Lite schematic" src="../../images/hydro-lite/hydro-lite-schematic.png" /></p>
+<p><em>(Click for full-size or download the PDF above.)</em></p>
+<hr />
+<h2 id="jumper-settings-i2c-pull-ups">Jumper Settings – I²C Pull-ups</h2>
+<p>!!! note "H1 / H2 pull-up jumpers"
+    * <strong>Purpose:</strong> optional 4 .7 kΩ pull-up resistors that tie <strong>SDA</strong> and <strong>SCL</strong>
+      to the 3.3 V rail.<br />
+    * <strong>When to fit:</strong><br />
+        * Analog I²C break-outs that <strong>do not</strong> include pull-ups.<br />
+        * Very long I²C cable runs (&gt; 1 m).<br />
+    * <strong>Safe with other devices:</strong> resistors sit <strong>in parallel</strong> with any pull-ups
+      already on sensor carrier boards, so closing the jumper will <em>not</em> overload the bus.</p>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>State</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1</strong></td>
+<td><em>Open</em> (default)</td>
+<td>No pull-up on <strong>SDA</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><em>Closed</em></td>
+<td>Adds 4 .7 kΩ pull-up to <strong>SDA</strong></td>
+</tr>
+<tr>
+<td><strong>H2</strong></td>
+<td><em>Open</em> (default)</td>
+<td>No pull-up on <strong>SCL</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><em>Closed</em></td>
+<td>Adds 4 .7 kΩ pull-up to <strong>SCL</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="bill-of-materials-bom">Bill of Materials (BOM)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Qty</th>
+<th>Ref</th>
+<th>Part</th>
+<th>LCSC / Mfr #</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>U1</td>
+<td>ATtiny1624-SS</td>
+<td>C347880</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Q1-Q2</td>
+<td>AO4407A MOSFET</td>
+<td>C10486</td>
+</tr>
+<tr>
+<td style="text-align: right;">…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p><em>(The full CSV is at <code>/hardware/hydro-lite/bom.csv</code>.)</em></p>
+<hr />
+<h2 id="assembly-test-steps">Assembly &amp; Test Steps</h2>
+<ol>
+<li>Solder MCU, crystal, and power section first.  </li>
+<li>Power up at 9 V and verify 3.3 V regulator output.  </li>
+<li>Flash Optiboot via the UPDI header.  </li>
+<li>Attach a pump and run <strong>blink-pump.py</strong> to test MOSFET drive.</li>
+</ol>
+<hr />
+<h2 id="revision-history">Revision History</h2>
+<table>
+<thead>
+<tr>
+<th>Rev</th>
+<th>Date</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0.0</td>
+<td>2025-06-10</td>
+<td>First public release</td>
+</tr>
+</tbody>
+</table>
 
 
 
