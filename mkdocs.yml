@@ -7,6 +7,8 @@ theme:
   palette:
     scheme: slate     # dark mode
     primary: teal
+  logo: images/ed3n-logo.svg       # ← relative to the docs/ folder
+    favicon: images/ed3n-logo.svg
 
 plugins:
   - search            # only the built-in search plugin
