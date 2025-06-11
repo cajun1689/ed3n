@@ -78,26 +78,6 @@ Hydro includes **ten Atlas headers**, each four-pin:
 
 ---
 
-### Pull-up jumpers
-
-| Jumper | Default | Closed |
-|--------|---------|--------|
-| **H1 (SDA)** | open | adds 4 .7 kΩ pull-up |
-| **H2 (SCL)** | open | adds 4 .7 kΩ pull-up |
-
-Close when your sensor mix lacks pull-ups or cable runs exceed ~1 m.
-
-### Pull-up jumpers
-
-| Jumper | Default | Closed |
-|--------|---------|--------|
-| **H1 (SDA)** | open | adds 4 .7 kΩ pull-up |
-| **H2 (SCL)** | open | adds 4 .7 kΩ pull-up |
-
-Close these if your sensor mix lacks pull-ups or cable length > 1 m.
-
----
-
 ## Pull-up-Resistor Jumpers (I²C)
 
 | Jumper | Default | Closed |
