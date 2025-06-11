@@ -402,7 +402,25 @@
           <li class="md-nav__item">
   <a href="#switching-ezotm-boards-from-uart-i2c" class="md-nav__link">
     <span class="md-ellipsis">
-      Switching EZO™ boards from UART → I²C
+      Switching EZO™ boards from UART ➜ I²C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-i2c-devices-can-i-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      How many I²C devices can I run?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-up-jumpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull-up jumpers
     </span>
   </a>
   
@@ -598,7 +616,25 @@
           <li class="md-nav__item">
   <a href="#switching-ezotm-boards-from-uart-i2c" class="md-nav__link">
     <span class="md-ellipsis">
-      Switching EZO™ boards from UART → I²C
+      Switching EZO™ boards from UART ➜ I²C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-i2c-devices-can-i-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      How many I²C devices can I run?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-up-jumpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull-up jumpers
     </span>
   </a>
   
@@ -738,18 +774,71 @@
 </blockquote>
 <hr />
 <h2 id="native-atlas-scientific-ezotm-support">Native Atlas Scientific EZO™ Support</h2>
-<p>Four headers expose <strong>TX, RX, SDA, SCL, 3 V3, GND</strong> for Atlas EZO™ circuits.</p>
-<h3 id="switching-ezotm-boards-from-uart-i2c">Switching EZO™ boards from UART → I²C</h3>
+<p>Hydro carries <strong>ten Atlas-ready headers</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Header group</th>
+<th style="text-align: right;">Count</th>
+<th>Typical sensors</th>
+<th>Bus type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Digital EZO™</strong></td>
+<td style="text-align: right;">5</td>
+<td>pH, ORP, DO, EC, RTD</td>
+<td>I²C</td>
+</tr>
+<tr>
+<td><strong>Analog-to-I²C (ENV)</strong></td>
+<td style="text-align: right;">5</td>
+<td>CO₂, O₂, Humidity, Pressure, RGB colour</td>
+<td>I²C</td>
+</tr>
+</tbody>
+</table>
+<p>Each header is pinned <strong>GND · 3 V3 · SDA · SCL · OFF</strong> (stand-by pin); Atlas carrier boards mate directly.</p>
+<h3 id="switching-ezotm-boards-from-uart-i2c">Switching EZO™ boards from UART ➜ I²C</h3>
 <ol>
-<li>Short the I²C solder jumpers on each EZO board<br />
-<em>(see Atlas guide: <a href="https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/">https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/</a>)</em><br />
-   – or use the \$13 <strong>I²C Toggler</strong>: <a href="https://atlas-scientific.com/ezo-accessories/i2c-toggler/">https://atlas-scientific.com/ezo-accessories/i2c-toggler/</a>  </li>
-<li>Power-cycle the circuit → it now defaults to address <code>0x61</code>.  </li>
-<li>Plug into any EZO header on the Hydro board.</li>
+<li><strong>Short the I²C jumpers</strong> on every EZO board<br />
+   – Atlas guide: <a href="https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/">https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/</a>  </li>
+<li>Power-cycle the board → it now defaults to <strong>address 0x61</strong> <em>(changeable via Atlas commands)</em>.  </li>
+<li>Plug into any Hydro EZO header.</li>
 </ol>
+<p>Need a tool? Atlas sells a \$13 <strong>I²C toggler</strong>: <a href="https://atlas-scientific.com/ezo-accessories/i2c-toggler/">https://atlas-scientific.com/ezo-accessories/i2c-toggler/</a></p>
+<h3 id="how-many-i2c-devices-can-i-run">How many I²C devices can I run?</h3>
+<ul>
+<li>Pi + level-shifter runs <strong>16 devices safely</strong> on a single bus.  </li>
+<li>Hydro offers <strong>8 JST-PH I²C ports</strong> + <strong>5 digital EZO</strong> + <strong>5 analog EZO</strong> = <strong>18 ports</strong>.  </li>
+<li><strong>Best practice:</strong> populate <strong>up to 16 total</strong> (e.g. all 10 Atlas ports + 6 JST sensors) to retain bus head-room.</li>
+</ul>
 <p>!!! note
-    The Hydro isn’t intended to run every connector at once.<br />
-    Use <strong>all 8 JST ports plus up to 6 EZO ports</strong> <em>or</em> all 4 EZO ports and fewer JST ports. As you migrate to EZO sensors, remove redundant consumer-grade probes.</p>
+    Remove consumer-grade sensors as you migrate to Atlas probes; avoid duplicating measurements and unnecessary bus load.</p>
+<h3 id="pull-up-jumpers">Pull-up jumpers</h3>
+<table>
+<thead>
+<tr>
+<th>Jumper</th>
+<th>Default</th>
+<th>Closed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1 (SDA)</strong></td>
+<td>open</td>
+<td>adds 4 .7 kΩ pull-up</td>
+</tr>
+<tr>
+<td><strong>H2 (SCL)</strong></td>
+<td>open</td>
+<td>adds 4 .7 kΩ pull-up</td>
+</tr>
+</tbody>
+</table>
+<p>Close these if your sensor mix lacks pull-ups or cable length &gt; 1 m.</p>
 <hr />
 <h2 id="pull-up-resistor-jumpers-i2c">Pull-up-Resistor Jumpers (I²C)</h2>
 <table>
