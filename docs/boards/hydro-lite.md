@@ -68,6 +68,35 @@ No soldering is required—boards arrive fully assembled and electrically tested
 
 ---
 
+## Controlling the Pumps
+
+Each MOSFET channel is wired to a dedicated Raspberry Pi GPIO pin.  
+Set the pin **HIGH** to energise the MOSFET and run the pump; set it **LOW** to stop.
+
+| Connector label | Pi GPIO |
+|-----------------|---------|
+| **Master Pump** | 6  |
+| **Pump 1** | 13 |
+| **Pump 2** | 26 |
+| **Pump 3** | 16 |
+| **Pump 4** | 12 |
+| **Pump 5** | 5  |
+| **Pump 6** | 25 |
+| **Pump 7** | 24 |
+| **Pump 8** | 23 |
+
+### Calibration workflow
+
+1. **Prime** each pump tubing with water or nutrient.  
+2. In your control software (Python, Node-RED, etc.) turn one pump **on** for a known time — e.g. **30 seconds**.  
+3. Measure the volume dispensed (graduated cylinder works well).  
+4. Repeat **3–5 times** and average the results to spot any deviation.  
+5. Enter that ml/sec (or ml/min) rate into your dosing algorithm.
+
+> **Tip:** Re-calibrate whenever you change tubing length, pump voltage, or fluid viscosity.
+
+---
+
 ## Assembly & Test
 
 Boards purchased on Amazon are **pre-assembled and tested**.  
