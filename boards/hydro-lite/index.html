@@ -367,9 +367,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-top-15-lines" class="md-nav__link">
+  <a href="#bill-of-materials-bom-excerpt" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (top 15 lines)
+      Bill of Materials (BOM excerpt)
     </span>
   </a>
   
@@ -553,9 +553,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-top-15-lines" class="md-nav__link">
+  <a href="#bill-of-materials-bom-excerpt" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (top 15 lines)
+      Bill of Materials (BOM excerpt)
     </span>
   </a>
   
@@ -599,12 +599,12 @@
 
 
 <h1 id="hydro-lite">Hydro Lite</h1>
-<p>A compact control board designed for automated hydroponic systems.<br />
-It drives <strong>eight 12 V nutrient-dosing pumps plus one 12 V master pump</strong>, letting you pre-mix nutrients before sending the solution to the reservoir.<br />
-No soldering is required—boards arrive fully assembled and electrically tested (available on Amazon).</p>
+<p>A compact control board for automated hydroponic systems.<br />
+It drives <strong>eight 12 V nutrient-dosing pumps plus one 12 V master pump</strong>, letting you pre-mix before filling the reservoir.<br />
+No soldering is required—boards arrive fully assembled and electrically tested (sold on Amazon).</p>
 <p>!!! tip "Quick links"
-    * <strong>Schematic PDF</strong> – <a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">download</a>{:target="_blank"}
-    * <strong>Purchase pre-assembled</strong> – <em>(Amazon listing coming soon)</em></p>
+    * <a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">Schematic PDF</a>
+    * <a href="https://amazon.com/your-listing">Buy pre-assembled on Amazon</a> <em>(coming soon)</em></p>
 <hr />
 <h2 id="features">Features</h2>
 <table>
@@ -621,7 +621,7 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tr>
 <tr>
 <td>Pump outputs</td>
-<td>9 × N-MOSFET (8 nutrient, 1 master) @ 12 V / 5 A ea</td>
+<td>9 × N-MOSFET (8 nutrient, 1 master) @ 12 V / 5 A each</td>
 </tr>
 <tr>
 <td>Supply</td>
@@ -636,14 +636,14 @@ No soldering is required—boards arrive fully assembled and electrically tested
 <hr />
 <h2 id="schematic">Schematic</h2>
 <p><img alt="Hydro Lite schematic" src="../../images/hydro-lite/hydro-lite-schematic.png" /></p>
-<p><em>(Click the image for full-resolution PDF.)</em></p>
+<p><em>(Click the image for the full-resolution PDF.)</em></p>
 <hr />
 <h2 id="jumper-settings-i2c-pull-ups">Jumper Settings – I²C Pull-ups</h2>
 <p>!!! note "H1 / H2 pull-up jumpers"
     * <strong>Purpose:</strong> adds 4 .7 kΩ pull-ups to <strong>SDA</strong> and <strong>SCL</strong>.<br />
     * <strong>Use when:</strong><br />
-        * A sensor board <strong>lacks</strong> its own pull-ups, <strong>or</strong><br />
-        * The I²C cable run is longer than ~1 m.<br />
+        * A sensor board <em>lacks</em> pull-ups, <strong>or</strong><br />
+        * Cable length &gt; 1 m.<br />
     * Extra pull-ups sit <strong>in parallel</strong> with existing ones—safe for mixed devices.</p>
 <table>
 <thead>
@@ -667,7 +667,7 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tbody>
 </table>
 <hr />
-<h2 id="bill-of-materials-top-15-lines">Bill of Materials (top 15 lines)</h2>
+<h2 id="bill-of-materials-bom-excerpt">Bill of Materials (BOM excerpt)</h2>
 <table>
 <thead>
 <tr>
@@ -680,13 +680,13 @@ No soldering is required—boards arrive fully assembled and electrically tested
 <tbody>
 <tr>
 <td style="text-align: right;">8</td>
-<td>CN1-CN8</td>
+<td>CN1–CN8</td>
 <td>BM04B-SRSS-TB</td>
 <td>C160390</td>
 </tr>
 <tr>
 <td style="text-align: right;">9</td>
-<td>D1-D9</td>
+<td>D1–D9</td>
 <td>SS14</td>
 <td>C2837270</td>
 </tr>
@@ -710,13 +710,13 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
-<td>H1-H4</td>
+<td>H1–H4</td>
 <td>2-pin header</td>
 <td>C492421</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
-<td>J1-J2</td>
+<td>J1–J2</td>
 <td>3-pin JST-PH</td>
 <td>C145956</td>
 </tr>
@@ -728,25 +728,25 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
-<td>Q1-Q2</td>
+<td>Q1–Q2</td>
 <td>AO4407A MOSFET</td>
 <td>C10486</td>
 </tr>
 <tr>
 <td style="text-align: right;">9</td>
-<td>R1-R9</td>
+<td>R1–R9</td>
 <td>10 kΩ 0603</td>
 <td>C25803</td>
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
-<td>R10-R13</td>
+<td>R10–R13</td>
 <td>4 .7 kΩ 0603</td>
 <td>C25804</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
-<td>U1-U2</td>
+<td>U1–U2</td>
 <td>AMS1117-3 .3 V regulator</td>
 <td>C6186</td>
 </tr>
@@ -758,28 +758,28 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
-<td>C1-C2</td>
+<td>C1–C2</td>
 <td>10 µF 0805</td>
 <td>C15850</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
-<td>C3-C8</td>
+<td>C3–C8</td>
 <td>100 nF 0603</td>
 <td>C16346</td>
 </tr>
 </tbody>
 </table>
-<p><em>(Full CSV: <code>/hardware/hydro-lite/bom.csv</code>.)</em></p>
+<p><em>Download the full CSV:</em> <a href="../../hardware/hydro-lite/bom.csv">hardware/hydro-lite/bom.csv</a></p>
 <hr />
 <h2 id="assembly-test">Assembly &amp; Test</h2>
-<p>Boards sold on Amazon come <strong>pre-soldered and fully tested</strong>.<br />
-If you’re hand-building from a bare PCB:</p>
+<p>Boards purchased on Amazon are <strong>pre-assembled and tested</strong>.<br />
+For DIY assembly:</p>
 <ol>
 <li>Solder MCU, regulator, and passives.  </li>
 <li>Apply 9 V; verify 3 .3 V rail.  </li>
 <li>Flash Optiboot via the UPDI header.  </li>
-<li>Run <strong>blink-pump.py</strong> to toggle each MOSFET and confirm pump outputs.</li>
+<li>Run <strong>blink-pump.py</strong> to toggle each MOSFET and confirm outputs.</li>
 </ol>
 <hr />
 <h2 id="revision-history">Revision History</h2>
