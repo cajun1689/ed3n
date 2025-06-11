@@ -36,18 +36,18 @@ I2C,<new_decimal>        // then reboot
 
 | Sensor | Dec | Hex | Datasheet |
 |--------|----:|-----|-----------|
-| pH | 100 | 0x64 | [PDF](../hardware/atlas/pH_EZO_Datasheet.pdf) |
-| EC | 101 | 0x65 | [PDF](../hardware/atlas/EC_EZO_Datasheet.pdf) |
-| Dissolved O₂ | 102 | 0x66 | [PDF](../hardware/atlas/DO_EZO_Datasheet.pdf) |
-| ORP | 103 | 0x67 | [PDF](../hardware/atlas/ORP_EZO_Datasheet.pdf) |
-| RTD (Temp) | 104 | 0x68 | [PDF](../hardware/atlas/EZO_RTD_Datasheet.pdf) |
-| CO₂ (ENV P) | 105 | 0x69 | [PDF](../hardware/atlas/EZO_CO2_Datasheet.pdf) |
-| O₂ (ENV P) | 106 | 0x6A | [PDF](../hardware/atlas/EZO_O2_P_datasheet.pdf) |
-| O₂ (ENV S) | 107 | 0x6B | [PDF](../hardware/atlas/EZO-O2-S-datasheet.pdf) |
-| Humidity (ENV P) | 108 | 0x6C | [PDF](../hardware/atlas/EZO-HUM-P-P-Datasheet.pdf) |
-| Humidity (ENV S) | 109 | 0x6D | [PDF](../hardware/atlas/EZO-HUM-P-S-Datasheet.pdf) |
-| Pressure (ENV) | 110 | 0x6E | [PDF](../hardware/atlas/EZO-PRS-Datasheet.pdf) |
-| RGB (ENV P) | 111 | 0x6F | [PDF](../hardware/atlas/EZO_RGB_P_Datasheet.pdf) |
-| RGB (ENV S) | 112 | 0x70 | [PDF](../hardware/atlas/EZO_RGB_S_Datasheet.pdf) |
+| pH | 100 | 0x64 | [PDF](hardware/atlas/pH_EZO_Datasheet.pdf) |
+| EC | 101 | 0x65 | [PDF](hardware/atlas/EC_EZO_Datasheet.pdf) |
+| Dissolved O₂ | 102 | 0x66 | [PDF](hardware/atlas/DO_EZO_Datasheet.pdf) |
+| ORP | 103 | 0x67 | [PDF](hardware/atlas/ORP_EZO_Datasheet.pdf) |
+| RTD (Temp) | 104 | 0x68 | [PDF](hardware/atlas/EZO_RTD_Datasheet.pdf) |
+| CO₂ (ENV P) | 105 | 0x69 | [PDF](hardware/atlas/EZO_CO2_Datasheet.pdf) |
+| O₂ (ENV P) | 106 | 0x6A | [PDF](hardware/atlas/EZO_O2_P_datasheet.pdf) |
+| O₂ (ENV S) | 107 | 0x6B | [PDF](hardware/atlas/EZO-O2-S-datasheet.pdf) |
+| Humidity (ENV P) | 108 | 0x6C | [PDF](hardware/atlas/EZO-HUM-P-P-Datasheet.pdf) |
+| Humidity (ENV S) | 109 | 0x6D | [PDF](hardware/atlas/EZO-HUM-P-S-Datasheet.pdf) |
+| Pressure (ENV) | 110 | 0x6E | [PDF](hardware/atlas/EZO-PRS-Datasheet.pdf) |
+| RGB (ENV P) | 111 | 0x6F | [PDF](hardware/atlas/EZO_RGB_P_Datasheet.pdf) |
+| RGB (ENV S) | 112 | 0x70 | [PDF](hardware/atlas/EZO_RGB_S_Datasheet.pdf) |
 
 > Keep a small spreadsheet so you never reuse an address.
