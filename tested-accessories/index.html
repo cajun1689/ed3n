@@ -371,6 +371,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tested Accessories
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -382,6 +395,73 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atlas-scientific-best-in-class-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atlas Scientific — best-in-class sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas Scientific — best-in-class sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-switch-uart-i2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 · Switch UART ➜ I²C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-assign-unique-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 · Assign unique addresses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 · Assign unique addresses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-address-map-datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested address map &amp; datasheets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -429,6 +509,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#atlas-scientific-best-in-class-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atlas Scientific — best-in-class sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atlas Scientific — best-in-class sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-switch-uart-i2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 · Switch UART ➜ I²C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-assign-unique-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 · Assign unique addresses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 · Assign unique addresses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-address-map-datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested address map &amp; datasheets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -447,7 +583,155 @@
 
 
 <h1 id="tested-accessories">Tested Accessories</h1>
-<p>(coming soon)</p>
+<p>Need sensors or add-ons that are proven on ED3N boards?<br />
+This page tracks what we’ve validated. (Software setup lives on the <a href="../tested-software/">Tested Software</a> page.)</p>
+<hr />
+<h2 id="atlas-scientific-best-in-class-sensors">Atlas Scientific — best-in-class sensors</h2>
+<p>Hydro exposes <strong>10 Atlas-ready headers</strong> (4-pin: <strong>GND · 3 V3 · SDA · SCL</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Header group</th>
+<th style="text-align: right;">Count</th>
+<th>Typical modules</th>
+<th>Carrier needed?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carrier EZO™</td>
+<td style="text-align: right;">5</td>
+<td>pH, EC, ORP, DO, RTD</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td>Bare “ENV” EZO™</td>
+<td style="text-align: right;">5</td>
+<td>CO₂, O₂, Humidity, Pressure, RGB</td>
+<td><strong>No</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-switch-uart-i2c">1 · Switch UART ➜ I²C</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Steps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Manual jumpers</strong></td>
+<td>Bridge each board’s I²C pads → LED turns <strong>blue</strong></td>
+</tr>
+<tr>
+<td><strong>\$13 toggler</strong></td>
+<td><a href="https://atlas-scientific.com/ezo-accessories/i2c-toggler/">https://atlas-scientific.com/ezo-accessories/i2c-toggler/</a></td>
+</tr>
+</tbody>
+</table>
+<p><em>(Pad locations: see datasheets below.)</em></p>
+<h3 id="2-assign-unique-addresses">2 · Assign unique addresses</h3>
+<p>Default address = <strong>99 dec (0x63)</strong>.<br />
+From any serial prompt:</p>
+<p>```text
+I2C,<new_decimal>        // then reboot</p>
+<hr />
+<h4 id="suggested-address-map-datasheets">Suggested address map &amp; datasheets</h4>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th style="text-align: right;">Dec</th>
+<th>Hex</th>
+<th>Datasheet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pH</td>
+<td style="text-align: right;">100</td>
+<td>0x64</td>
+<td><a href="../hardware/atlas/pH_EZO_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>EC</td>
+<td style="text-align: right;">101</td>
+<td>0x65</td>
+<td><a href="../hardware/atlas/EC_EZO_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Dissolved O₂</td>
+<td style="text-align: right;">102</td>
+<td>0x66</td>
+<td><a href="../hardware/atlas/DO_EZO_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>ORP</td>
+<td style="text-align: right;">103</td>
+<td>0x67</td>
+<td><a href="../hardware/atlas/ORP_EZO_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>RTD (Temp)</td>
+<td style="text-align: right;">104</td>
+<td>0x68</td>
+<td><a href="../hardware/atlas/EZO_RTD_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>CO₂ (ENV P)</td>
+<td style="text-align: right;">105</td>
+<td>0x69</td>
+<td><a href="../hardware/atlas/EZO_CO2_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>O₂ (ENV P)</td>
+<td style="text-align: right;">106</td>
+<td>0x6A</td>
+<td><a href="../hardware/atlas/EZO_O2_P_datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>O₂ (ENV S)</td>
+<td style="text-align: right;">107</td>
+<td>0x6B</td>
+<td><a href="../hardware/atlas/EZO-O2-S-datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Humidity (ENV P)</td>
+<td style="text-align: right;">108</td>
+<td>0x6C</td>
+<td><a href="../hardware/atlas/EZO-HUM-P-P-Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Humidity (ENV S)</td>
+<td style="text-align: right;">109</td>
+<td>0x6D</td>
+<td><a href="../hardware/atlas/EZO-HUM-P-S-Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Pressure (ENV)</td>
+<td style="text-align: right;">110</td>
+<td>0x6E</td>
+<td><a href="../hardware/atlas/EZO-PRS-Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>RGB (ENV P)</td>
+<td style="text-align: right;">111</td>
+<td>0x6F</td>
+<td><a href="../hardware/atlas/EZO_RGB_P_Datasheet.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>RGB (ENV S)</td>
+<td style="text-align: right;">112</td>
+<td>0x70</td>
+<td><a href="../hardware/atlas/EZO_RGB_S_Datasheet.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Keep a small spreadsheet so you never reuse an address.</p>
+</blockquote>
 
 
 
