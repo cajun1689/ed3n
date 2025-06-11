@@ -376,6 +376,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#controlling-the-pumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling the Pumps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controlling the Pumps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calibration workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#assembly-test" class="md-nav__link">
     <span class="md-ellipsis">
       Assembly &amp; Test
@@ -558,6 +582,30 @@
       Bill of Materials (BOM excerpt)
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-the-pumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling the Pumps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controlling the Pumps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calibration workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -771,6 +819,67 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tbody>
 </table>
 <p><em>Download the full CSV:</em> <a href="../../hardware/hydro-lite/bom.csv">hardware/hydro-lite/bom.csv</a></p>
+<hr />
+<h2 id="controlling-the-pumps">Controlling the Pumps</h2>
+<p>Each MOSFET channel is wired to a dedicated Raspberry Pi GPIO pin.<br />
+Set the pin <strong>HIGH</strong> to energise the MOSFET and run the pump; set it <strong>LOW</strong> to stop.</p>
+<table>
+<thead>
+<tr>
+<th>Connector label</th>
+<th>Pi GPIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Master Pump</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Pump 1</strong></td>
+<td>13</td>
+</tr>
+<tr>
+<td><strong>Pump 2</strong></td>
+<td>26</td>
+</tr>
+<tr>
+<td><strong>Pump 3</strong></td>
+<td>16</td>
+</tr>
+<tr>
+<td><strong>Pump 4</strong></td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Pump 5</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Pump 6</strong></td>
+<td>25</td>
+</tr>
+<tr>
+<td><strong>Pump 7</strong></td>
+<td>24</td>
+</tr>
+<tr>
+<td><strong>Pump 8</strong></td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calibration-workflow">Calibration workflow</h3>
+<ol>
+<li><strong>Prime</strong> each pump tubing with water or nutrient.  </li>
+<li>In your control software (Python, Node-RED, etc.) turn one pump <strong>on</strong> for a known time — e.g. <strong>30 seconds</strong>.  </li>
+<li>Measure the volume dispensed (graduated cylinder works well).  </li>
+<li>Repeat <strong>3–5 times</strong> and average the results to spot any deviation.  </li>
+<li>Enter that ml/sec (or ml/min) rate into your dosing algorithm.</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> Re-calibrate whenever you change tubing length, pump voltage, or fluid viscosity.</p>
+</blockquote>
 <hr />
 <h2 id="assembly-test">Assembly &amp; Test</h2>
 <p>Boards purchased on Amazon are <strong>pre-assembled and tested</strong>.<br />
