@@ -45,32 +45,47 @@ Everything in **Hydro Basic**, plus Pi power-backfeed and native Atlas Scientifi
 
 ## Native Atlas Scientific EZO™ Support
 
-Hydro carries **ten Atlas-ready headers**:
+Hydro includes **ten Atlas headers**, each four-pin:
 
-| Header group | Count | Typical sensors | Bus type |
-|--------------|------:|-----------------|----------|
-| **Digital EZO™** | 5 | pH, ORP, DO, EC, RTD | I²C |
-| **Analog-to-I²C (ENV)** | 5 | CO₂, O₂, Humidity, Pressure, RGB colour | I²C |
+| Pin | Function |
+|-----|----------|
+| GND | Ground |
+| 3 V3 | 3.3 V power |
+| SDA | I²C data |
+| SCL | I²C clock |
 
-Each header is pinned **GND · 3 V3 · SDA · SCL · OFF** (stand-by pin); Atlas carrier boards mate directly.
+| Header group | Count | Typical modules | Carrier board? |
+|--------------|------:|-----------------|----------------|
+| **Carrier EZO™** | 5 | pH, ORP, DO, EC, RTD | Yes |
+| **Bare-module EZO™** | 5 | CO₂, O₂, Humidity, Pressure, RGB | No |
 
 ### Switching EZO™ boards from UART ➜ I²C
 
-1. **Short the I²C jumpers** on every EZO board  
+1. **Short the I²C jumpers** on each EZO board  
    – Atlas guide: <https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/>  
-2. Power-cycle the board → it now defaults to **address 0x61** *(changeable via Atlas commands)*.  
-3. Plug into any Hydro EZO header.
+2. Power-cycle → default address **0x61**.  
+3. Plug into any Atlas header.  
+   *(Optional: use the \$13 [I²C Toggler](https://atlas-scientific.com/ezo-accessories/i2c-toggler/).)*
 
-Need a tool? Atlas sells a \$13 **I²C toggler**: <https://atlas-scientific.com/ezo-accessories/i2c-toggler/>
+### I²C capacity & best practice
 
-### How many I²C devices can I run?
-
-* Pi + level-shifter runs **16 devices safely** on a single bus.  
-* Hydro offers **8 JST-PH I²C ports** + **5 digital EZO** + **5 analog EZO** = **18 ports**.  
-* **Best practice:** populate **up to 16 total** (e.g. all 10 Atlas ports + 6 JST sensors) to retain bus head-room.
+* Pi bus handles **16 devices** reliably.  
+* Hydro exposes **8 JST ports + 10 Atlas headers = 18 physical ports**.  
+* Populate **up to 16** devices total (e.g., all 10 Atlas + 6 JST) to keep signal margins.
 
 !!! note
-    Remove consumer-grade sensors as you migrate to Atlas probes; avoid duplicating measurements and unnecessary bus load.
+    Remove redundant consumer sensors as you migrate to Atlas probes to minimise bus load.
+
+---
+
+### Pull-up jumpers
+
+| Jumper | Default | Closed |
+|--------|---------|--------|
+| **H1 (SDA)** | open | adds 4 .7 kΩ pull-up |
+| **H2 (SCL)** | open | adds 4 .7 kΩ pull-up |
+
+Close when your sensor mix lacks pull-ups or cable runs exceed ~1 m.
 
 ### Pull-up jumpers
 
