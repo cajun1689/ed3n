@@ -45,19 +45,41 @@ Everything in **Hydro Basic**, plus Pi power-backfeed and native Atlas Scientifi
 
 ## Native Atlas Scientific EZO™ Support
 
-Four headers expose **TX, RX, SDA, SCL, 3 V3, GND** for Atlas EZO™ circuits.
+Hydro carries **ten Atlas-ready headers**:
 
-### Switching EZO™ boards from UART → I²C
+| Header group | Count | Typical sensors | Bus type |
+|--------------|------:|-----------------|----------|
+| **Digital EZO™** | 5 | pH, ORP, DO, EC, RTD | I²C |
+| **Analog-to-I²C (ENV)** | 5 | CO₂, O₂, Humidity, Pressure, RGB colour | I²C |
 
-1. Short the I²C solder jumpers on each EZO board  
-   *(see Atlas guide: <https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/>)*  
-   – or use the \$13 **I²C Toggler**: <https://atlas-scientific.com/ezo-accessories/i2c-toggler/>  
-2. Power-cycle the circuit → it now defaults to address `0x61`.  
-3. Plug into any EZO header on the Hydro board.
+Each header is pinned **GND · 3 V3 · SDA · SCL · OFF** (stand-by pin); Atlas carrier boards mate directly.
+
+### Switching EZO™ boards from UART ➜ I²C
+
+1. **Short the I²C jumpers** on every EZO board  
+   – Atlas guide: <https://www.instructables.com/UART-AND-I2C-MODE-SWITCHING-FOR-ATLAS-SCIENTIFIC-E/>  
+2. Power-cycle the board → it now defaults to **address 0x61** *(changeable via Atlas commands)*.  
+3. Plug into any Hydro EZO header.
+
+Need a tool? Atlas sells a \$13 **I²C toggler**: <https://atlas-scientific.com/ezo-accessories/i2c-toggler/>
+
+### How many I²C devices can I run?
+
+* Pi + level-shifter runs **16 devices safely** on a single bus.  
+* Hydro offers **8 JST-PH I²C ports** + **5 digital EZO** + **5 analog EZO** = **18 ports**.  
+* **Best practice:** populate **up to 16 total** (e.g. all 10 Atlas ports + 6 JST sensors) to retain bus head-room.
 
 !!! note
-    The Hydro isn’t intended to run every connector at once.  
-    Use **all 8 JST ports plus up to 6 EZO ports** *or* all 4 EZO ports and fewer JST ports. As you migrate to EZO sensors, remove redundant consumer-grade probes.
+    Remove consumer-grade sensors as you migrate to Atlas probes; avoid duplicating measurements and unnecessary bus load.
+
+### Pull-up jumpers
+
+| Jumper | Default | Closed |
+|--------|---------|--------|
+| **H1 (SDA)** | open | adds 4 .7 kΩ pull-up |
+| **H2 (SCL)** | open | adds 4 .7 kΩ pull-up |
+
+Close these if your sensor mix lacks pull-ups or cable length > 1 m.
 
 ---
 
