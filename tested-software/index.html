@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tested-software" class="md-skip">
+        <a href="#tested-recommended-software" class="md-skip">
           Skip to content
         </a>
       
@@ -391,6 +391,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tested Software
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -402,6 +415,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mycodo-flagship-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mycodo — flagship integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mycodo — flagship integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start-with-mycodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick-start with Mycodo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-stacks-weve-tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other stacks we’ve tested
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calibration-reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calibration reminder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -427,6 +510,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mycodo-flagship-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mycodo — flagship integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mycodo — flagship integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start-with-mycodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick-start with Mycodo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-stacks-weve-tested" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other stacks we’ve tested
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calibration-reminder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calibration reminder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -444,8 +586,95 @@
   
 
 
-<h1 id="tested-software">Tested Software</h1>
-<p>(coming soon)</p>
+<h1 id="tested-recommended-software">Tested &amp; Recommended Software</h1>
+<p>ED3N Hydro boards speak plain <strong>GPIO</strong> and <strong>I²C</strong>, so they work with <em>any</em> automation stack that can toggle pins and poll sensors.<br />
+That said, the project began with one goal in mind:</p>
+<blockquote>
+<p><strong>“A plug-and-play board that shows off everything Mycodo can do.”</strong></p>
+</blockquote>
+<hr />
+<h2 id="mycodo-flagship-integration">Mycodo — flagship integration</h2>
+<p><a href="https://kizniche.github.io/Mycodo/">Mycodo</a> is an open-source environmental controller written for the Raspberry Pi.<br />
+Kyle Gabriel (author) graciously helped ensure the ED3N pinout matches Mycodo’s dosing and sensor modules.</p>
+<table>
+<thead>
+<tr>
+<th>Why Mycodo pairs perfectly</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Native dosing</strong></td>
+<td>Map each of the Hydro’s nine pump outputs to Mycodo’s “Doser” modules—set ml/min or ml/second directly.</td>
+</tr>
+<tr>
+<td><strong>Sensor auto-detect</strong></td>
+<td>Atlas EZO™ I²C addresses appear in the GUI; just choose pH, EC, etc., and Mycodo logs &amp; graphs instantly.</td>
+</tr>
+<tr>
+<td><strong>PID &amp; scheduling</strong></td>
+<td>Use built-in PID loops to maintain pH/EC, or create cron-style schedules for nutrient mixes.</td>
+</tr>
+<tr>
+<td><strong>Dashboard &amp; alerts</strong></td>
+<td>Grafana dashboards out of the box; email/SMS/Telegram alerts when values drift.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-start-with-mycodo">Quick-start with Mycodo</h3>
+<ol>
+<li>Flash Raspberry Pi OS Lite.  </li>
+<li>Run the one-line installer from the Mycodo docs.  </li>
+<li>Add <strong>Nine Doser outputs</strong> (GPIO 6, 13, 26, 16, 12, 5, 25, 24, 23).  </li>
+<li>Add <strong>Sensor inputs</strong> for each Atlas EZO address (default 0x61, 0x62, …).  </li>
+<li>Calibrate pumps (Mycodo Doser-&gt;Calibrate) and you’re ready to automate.</li>
+</ol>
+<hr />
+<h2 id="other-stacks-weve-tested">Other stacks we’ve tested</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Node-RED</strong></td>
+<td>Use the <code>rpi-gpio out</code> node for pumps and <code>i2c-bus</code> contrib nodes for I²C sensors.</td>
+</tr>
+<tr>
+<td><strong>Home Assistant</strong></td>
+<td>GPIO control via the <strong>Raspberry Pi GPIO</strong> integration; sensor data over MQTT or I²C proxy scripts.</td>
+</tr>
+<tr>
+<td><strong>Standalone Python</strong></td>
+<td>Any library combo (e.g., <code>RPi.GPIO</code> + <code>smbus2</code>); see <code>examples/</code> in the GitHub repo.</td>
+</tr>
+<tr>
+<td><strong>Custom C / Rust</strong></td>
+<td>Tested with <code>pigpio</code> C library and the <code>rppal</code> crate in Rust—rock-solid for industrial deployments.</td>
+</tr>
+</tbody>
+</table>
+<p><em>(If you’ve validated another platform, open an Issue or PR and we’ll add it here.)</em></p>
+<hr />
+<h2 id="calibration-reminder">Calibration reminder</h2>
+<p>Whatever software you choose, always:</p>
+<ol>
+<li><strong>Prime</strong> each pump line.  </li>
+<li><strong>Run</strong> for a fixed time (e.g., 30 s).  </li>
+<li><strong>Measure</strong> the volume, repeat 3–5×, average, and store the ml/s rate.  </li>
+<li>Re-calibrate after changing tubing, voltage, or fluid viscosity.</li>
+</ol>
+<hr />
+<h2 id="need-help">Need help?</h2>
+<ul>
+<li><strong>Software questions:</strong> Mycodo Discord / GitHub Discussions  </li>
+<li><strong>Board questions:</strong> <a href="mailto:support@ed3n.io">support@ed3n.io</a></li>
+</ul>
+<p>Happy automating!</p>
 
 
 
