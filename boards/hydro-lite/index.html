@@ -367,18 +367,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-bom" class="md-nav__link">
+  <a href="#bill-of-materials-top-15-lines" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (BOM)
+      Bill of Materials (top 15 lines)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assembly-test-steps" class="md-nav__link">
+  <a href="#assembly-test" class="md-nav__link">
     <span class="md-ellipsis">
-      Assembly &amp; Test Steps
+      Assembly &amp; Test
     </span>
   </a>
   
@@ -553,18 +553,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-bom" class="md-nav__link">
+  <a href="#bill-of-materials-top-15-lines" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (BOM)
+      Bill of Materials (top 15 lines)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assembly-test-steps" class="md-nav__link">
+  <a href="#assembly-test" class="md-nav__link">
     <span class="md-ellipsis">
-      Assembly &amp; Test Steps
+      Assembly &amp; Test
     </span>
   </a>
   
@@ -599,19 +599,19 @@
 
 
 <h1 id="hydro-lite">Hydro Lite</h1>
-<p>A low-cost, two-channel control board for small hydroponic builds.<br />
-Supports <strong>12 V pumps</strong>, <strong>analog I²C sensors</strong>, and optional
-pull-up resistors on the SDA/SCL lines (see <em>Jumper Settings</em> below).</p>
+<p>A compact control board designed for automated hydroponic systems.<br />
+It drives <strong>eight 12 V nutrient-dosing pumps plus one 12 V master pump</strong>, letting you pre-mix nutrients before sending the solution to the reservoir.<br />
+No soldering is required—boards arrive fully assembled and electrically tested (available on Amazon).</p>
 <p>!!! tip "Quick links"
-    * <a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">Schematic PDF</a>{:target="_blank"}
-    * <a href="https://jlcpcb.com/partdetail/...">Purchase on JLCPCB</a> <em>(coming soon)</em></p>
+    * <strong>Schematic PDF</strong> – <a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">download</a>{:target="_blank"}
+    * <strong>Purchase pre-assembled</strong> – <em>(Amazon listing coming soon)</em></p>
 <hr />
 <h2 id="features">Features</h2>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
 </tr>
 </thead>
 <tbody>
@@ -620,81 +620,111 @@ pull-up resistors on the SDA/SCL lines (see <em>Jumper Settings</em> below).</p>
 <td>ATtiny1624 @ 16 MHz (Optiboot)</td>
 </tr>
 <tr>
-<td>Power input</td>
-<td>9 – 15 V DC barrel</td>
+<td>Pump outputs</td>
+<td>9 × N-MOSFET (8 nutrient, 1 master) @ 12 V / 5 A ea</td>
 </tr>
 <tr>
-<td>Outputs</td>
-<td>2 × MOSFET (5 A max each)</td>
+<td>Supply</td>
+<td>9 – 15 V DC barrel jack</td>
 </tr>
 <tr>
-<td>I²C header</td>
-<td>3-pin JST-PH (3.3 V logic)</td>
+<td>Sensor bus</td>
+<td>3-pin JST-PH I²C (3 .3 V logic)</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="schematic">Schematic</h2>
 <p><img alt="Hydro Lite schematic" src="../../images/hydro-lite/hydro-lite-schematic.png" /></p>
-<p><em>(Click for full-size or download the PDF above.)</em></p>
+<p><em>(Click the image for full-resolution PDF.)</em></p>
 <hr />
 <h2 id="jumper-settings-i2c-pull-ups">Jumper Settings – I²C Pull-ups</h2>
 <p>!!! note "H1 / H2 pull-up jumpers"
-    * <strong>Purpose:</strong> optional 4 .7 kΩ pull-up resistors that tie <strong>SDA</strong> and <strong>SCL</strong>
-      to the 3.3 V rail.<br />
-    * <strong>When to fit:</strong><br />
-        * Analog I²C break-outs that <strong>do not</strong> include pull-ups.<br />
-        * Very long I²C cable runs (&gt; 1 m).<br />
-    * <strong>Safe with other devices:</strong> resistors sit <strong>in parallel</strong> with any pull-ups
-      already on sensor carrier boards, so closing the jumper will <em>not</em> overload the bus.</p>
+    * <strong>Purpose:</strong> adds 4 .7 kΩ pull-ups to <strong>SDA</strong> and <strong>SCL</strong>.<br />
+    * <strong>Use when:</strong><br />
+        * A sensor board <strong>lacks</strong> its own pull-ups, <strong>or</strong><br />
+        * The I²C cable run is longer than ~1 m.<br />
+    * Extra pull-ups sit <strong>in parallel</strong> with existing ones—safe for mixed devices.</p>
 <table>
 <thead>
 <tr>
 <th>Jumper</th>
-<th>State</th>
-<th>Effect</th>
+<th>Default</th>
+<th>Closed</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>H1</strong></td>
-<td><em>Open</em> (default)</td>
-<td>No pull-up on <strong>SDA</strong></td>
+<td><strong>H1 (SDA)</strong></td>
+<td>open</td>
+<td>adds 4 .7 kΩ pull-up</td>
 </tr>
 <tr>
-<td></td>
-<td><em>Closed</em></td>
-<td>Adds 4 .7 kΩ pull-up to <strong>SDA</strong></td>
-</tr>
-<tr>
-<td><strong>H2</strong></td>
-<td><em>Open</em> (default)</td>
-<td>No pull-up on <strong>SCL</strong></td>
-</tr>
-<tr>
-<td></td>
-<td><em>Closed</em></td>
-<td>Adds 4 .7 kΩ pull-up to <strong>SCL</strong></td>
+<td><strong>H2 (SCL)</strong></td>
+<td>open</td>
+<td>adds 4 .7 kΩ pull-up</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="bill-of-materials-bom">Bill of Materials (BOM)</h2>
+<h2 id="bill-of-materials-top-15-lines">Bill of Materials (top 15 lines)</h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: right;">Qty</th>
-<th>Ref</th>
+<th>Designators</th>
 <th>Part</th>
-<th>LCSC / Mfr #</th>
+<th>LCSC #</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align: right;">8</td>
+<td>CN1-CN8</td>
+<td>BM04B-SRSS-TB</td>
+<td>C160390</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>D1-D9</td>
+<td>SS14</td>
+<td>C2837270</td>
+</tr>
+<tr>
 <td style="text-align: right;">1</td>
-<td>U1</td>
-<td>ATtiny1624-SS</td>
-<td>C347880</td>
+<td>DC1</td>
+<td>DC-005-5A-2.0 jack</td>
+<td>C381116</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>EXTRA_HEADER</td>
+<td>PZ254V-12-10P</td>
+<td>C492422</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>F1</td>
+<td>FSMD200-16R fuse</td>
+<td>C220154</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>H1-H4</td>
+<td>2-pin header</td>
+<td>C492421</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>J1-J2</td>
+<td>3-pin JST-PH</td>
+<td>C145956</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>L1</td>
+<td>10 µH inductor</td>
+<td>C14877</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
@@ -703,21 +733,53 @@ pull-up resistors on the SDA/SCL lines (see <em>Jumper Settings</em> below).</p>
 <td>C10486</td>
 </tr>
 <tr>
-<td style="text-align: right;">…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
+<td style="text-align: right;">9</td>
+<td>R1-R9</td>
+<td>10 kΩ 0603</td>
+<td>C25803</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>R10-R13</td>
+<td>4 .7 kΩ 0603</td>
+<td>C25804</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>U1-U2</td>
+<td>AMS1117-3 .3 V regulator</td>
+<td>C6186</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>U3</td>
+<td>ATtiny1624-SS</td>
+<td>C347880</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>C1-C2</td>
+<td>10 µF 0805</td>
+<td>C15850</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>C3-C8</td>
+<td>100 nF 0603</td>
+<td>C16346</td>
 </tr>
 </tbody>
 </table>
-<p><em>(The full CSV is at <code>/hardware/hydro-lite/bom.csv</code>.)</em></p>
+<p><em>(Full CSV: <code>/hardware/hydro-lite/bom.csv</code>.)</em></p>
 <hr />
-<h2 id="assembly-test-steps">Assembly &amp; Test Steps</h2>
+<h2 id="assembly-test">Assembly &amp; Test</h2>
+<p>Boards sold on Amazon come <strong>pre-soldered and fully tested</strong>.<br />
+If you’re hand-building from a bare PCB:</p>
 <ol>
-<li>Solder MCU, crystal, and power section first.  </li>
-<li>Power up at 9 V and verify 3.3 V regulator output.  </li>
+<li>Solder MCU, regulator, and passives.  </li>
+<li>Apply 9 V; verify 3 .3 V rail.  </li>
 <li>Flash Optiboot via the UPDI header.  </li>
-<li>Attach a pump and run <strong>blink-pump.py</strong> to test MOSFET drive.</li>
+<li>Run <strong>blink-pump.py</strong> to toggle each MOSFET and confirm pump outputs.</li>
 </ol>
 <hr />
 <h2 id="revision-history">Revision History</h2>
