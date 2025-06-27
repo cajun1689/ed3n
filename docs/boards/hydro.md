@@ -26,7 +26,9 @@ Everything in **Hydro Basic**, plus Pi power-backfeed and native Atlas Scientifi
 
 ## Schematic
 
-![Hydro schematic](../images/hydro/hydro-schematic.png)
+![Sheet 1](../images/hydro/Sheet_1.png)
+![Sheet 2](../images/hydro/Sheet_2.png)
+![Sheet 3](../images/hydro/Sheet_3.png)
 
 *(Click the image for the PDF.)*
 
