@@ -5,13 +5,19 @@ repo_url: https://github.com/cajun1689/ed3n
 theme:
   name: material
   palette:
-    scheme: slate     # dark mode
+    scheme: slate        # dark mode
     primary: teal
-  logo: images/ed3n-logo.svg        # relative to docs/
+  logo: images/ed3n-logo.svg     # relative to docs/
   favicon: images/ed3n-logo.svg
 
+markdown_extensions:
+  - admonition            # call-out blocks (!!! note, etc.)
+  - pymdownx.tabbed:      # === "Tabs" syntax
+      alternate_style: true
+  - pymdownx.superfences   # needed for code / images inside tabs
+
 plugins:
-  - search            # only the built-in search plugin
+  - search                # built-in search plugin
 
 nav:
   - Home: index.md
