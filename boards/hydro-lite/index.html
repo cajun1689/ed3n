@@ -365,9 +365,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-bom-excerpt" class="md-nav__link">
+  <a href="#bill-of-materials-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (BOM excerpt)
+      Bill of Materials (updated)
     </span>
   </a>
   
@@ -575,9 +575,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-bom-excerpt" class="md-nav__link">
+  <a href="#bill-of-materials-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Bill of Materials (BOM excerpt)
+      Bill of Materials (updated)
     </span>
   </a>
   
@@ -681,7 +681,13 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </table>
 <hr />
 <h2 id="schematic">Schematic</h2>
-<p><img alt="Hydro Lite schematic" src="../../images/hydro-lite/hydro-lite-schematic.png" /></p>
+<p>!!! tabs
+    === "Sheet 1"
+        <img alt="Sheet 1" src="../../images/hydro-lite/Sheet_1.png" />
+    === "Sheet 2"
+        <img alt="Sheet 2" src="../../images/hydro-lite/Sheet_2.png" />
+    === "Board overview"
+        <img alt="Board overview" src="../../images/hydro-lite/SCH_Bosnia_small.png" /></p>
 <p><em>(Click the image for the full-resolution PDF.)</em></p>
 <hr />
 <h2 id="jumper-settings-i2c-pull-ups">Jumper Settings – I²C Pull-ups</h2>
@@ -713,106 +719,274 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </tbody>
 </table>
 <hr />
-<h2 id="bill-of-materials-bom-excerpt">Bill of Materials (BOM excerpt)</h2>
+<h2 id="bill-of-materials-updated">Bill of Materials (updated)</h2>
 <table>
 <thead>
 <tr>
+<th style="text-align: right;">ID</th>
+<th>Name</th>
+<th>Designator(s)</th>
+<th>Footprint</th>
 <th style="text-align: right;">Qty</th>
-<th>Designators</th>
-<th>Part</th>
-<th>LCSC #</th>
+<th>Manufacturer Part</th>
+<th>Manufacturer</th>
+<th>Supplier</th>
+<th>Supplier Part</th>
+<th style="text-align: right;">Price (USD)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align: right;">1</td>
+<td>ZX-HY2.0-4PZZ</td>
+<td>CN1,CN2,CN3,CN4,CN5,CN6,CN7,CN8</td>
+<td>CONN-TH_4P-P2.00_HX20020-4A_2</td>
 <td style="text-align: right;">8</td>
-<td>CN1–CN8</td>
-<td>BM04B-SRSS-TB</td>
-<td>C160390</td>
+<td>ZX-HY2.0-4PZZ</td>
+<td>Megastar</td>
+<td>LCSC</td>
+<td>C7429580</td>
+<td style="text-align: right;">0.026</td>
 </tr>
 <tr>
+<td style="text-align: right;">2</td>
+<td>B340A-13-F</td>
+<td>D1,D2,D3,D4,D6,D7,D8,D13,D21</td>
+<td>SMA_L4.4-W2.6-LS5.0-RD</td>
 <td style="text-align: right;">9</td>
-<td>D1–D9</td>
-<td>SS14</td>
-<td>C2837270</td>
+<td>B340A-13-F</td>
+<td>DIODES</td>
+<td>LCSC</td>
+<td>C85098</td>
+<td style="text-align: right;">0.059</td>
 </tr>
 <tr>
-<td style="text-align: right;">1</td>
-<td>DC1</td>
-<td>DC-005-5A-2.0 jack</td>
-<td>C381116</td>
-</tr>
-<tr>
-<td style="text-align: right;">1</td>
-<td>EXTRA_HEADER</td>
+<td style="text-align: right;">3</td>
 <td>PZ254V-12-10P</td>
+<td>EXTRA_HEADER</td>
+<td>HDR-TH_10P-P2.54-V-M-R2-C5-S2.54</td>
+<td style="text-align: right;">1</td>
+<td>PZ254V-12-10P</td>
+<td>XFCN</td>
+<td>LCSC</td>
 <td>C492422</td>
-</tr>
-<tr>
-<td style="text-align: right;">1</td>
-<td>F1</td>
-<td>FSMD200-16R fuse</td>
-<td>C220154</td>
+<td style="text-align: right;">0.053</td>
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
-<td>H1–H4</td>
-<td>2-pin header</td>
-<td>C492421</td>
-</tr>
-<tr>
-<td style="text-align: right;">2</td>
-<td>J1–J2</td>
-<td>3-pin JST-PH</td>
-<td>C145956</td>
-</tr>
-<tr>
+<td>AO3404</td>
+<td>Q8</td>
+<td>SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR</td>
 <td style="text-align: right;">1</td>
-<td>L1</td>
-<td>10 µH inductor</td>
-<td>C14877</td>
+<td>AO3404</td>
+<td>Hottech</td>
+<td>LCSC</td>
+<td>C192925</td>
+<td style="text-align: right;">0.038</td>
 </tr>
 <tr>
-<td style="text-align: right;">2</td>
-<td>Q1–Q2</td>
-<td>AO4407A MOSFET</td>
-<td>C10486</td>
-</tr>
-<tr>
+<td style="text-align: right;">5</td>
+<td>XY302V-3.5-2P</td>
+<td>MASTER_PUMP1,PUMP_1-8</td>
+<td>CONN-TH_XY302V-3.5-2P</td>
 <td style="text-align: right;">9</td>
-<td>R1–R9</td>
-<td>10 kΩ 0603</td>
-<td>C25803</td>
-</tr>
-<tr>
-<td style="text-align: right;">4</td>
-<td>R10–R13</td>
-<td>4 .7 kΩ 0603</td>
-<td>C25804</td>
-</tr>
-<tr>
-<td style="text-align: right;">2</td>
-<td>U1–U2</td>
-<td>AMS1117-3 .3 V regulator</td>
-<td>C6186</td>
-</tr>
-<tr>
-<td style="text-align: right;">1</td>
-<td>U3</td>
-<td>ATtiny1624-SS</td>
-<td>C347880</td>
-</tr>
-<tr>
-<td style="text-align: right;">2</td>
-<td>C1–C2</td>
-<td>10 µF 0805</td>
-<td>C15850</td>
+<td>XY302V-3.5-2P</td>
+<td>Xinlaiya</td>
+<td>LCSC</td>
+<td>C784940</td>
+<td style="text-align: right;">0.141</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
-<td>C3–C8</td>
-<td>100 nF 0603</td>
-<td>C16346</td>
+<td>FC-2012HRK-620D</td>
+<td>POWER1</td>
+<td>LED0805-R-RD</td>
+<td style="text-align: right;">1</td>
+<td>NCD0805R1</td>
+<td>NationStar</td>
+<td>LCSC</td>
+<td>C84256</td>
+<td style="text-align: right;">0.014</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>CAT24C32WI-GT3</td>
+<td>U2</td>
+<td>SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL</td>
+<td style="text-align: right;">1</td>
+<td>CAT24C32WI-GT3</td>
+<td>ON Semi</td>
+<td>LCSC</td>
+<td>C236187</td>
+<td style="text-align: right;">0.145</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>2.54-2 × 20</td>
+<td>U11</td>
+<td>HDR-TH_40P-P2.54-V-F-R2-C20-S2.54</td>
+<td style="text-align: right;">1</td>
+<td>2.54-2 × 20</td>
+<td>ZHOURI</td>
+<td>LCSC</td>
+<td>C2977589</td>
+<td style="text-align: right;">0.217</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>AO3400A</td>
+<td>Q1-Q7,Q9</td>
+<td>SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR</td>
+<td style="text-align: right;">8</td>
+<td>AO3400A</td>
+<td>AOS</td>
+<td>LCSC</td>
+<td>C20917</td>
+<td style="text-align: right;">0.078</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>4 × 7 kΩ</td>
+<td>R1-R2</td>
+<td>R0402</td>
+<td style="text-align: right;">2</td>
+<td>0402WGF4701TCE</td>
+<td>Uni-Royal</td>
+<td>LCSC</td>
+<td>C25900</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>100 Ω</td>
+<td>R3,R6-R7,R9,R11,R13,R16-R19</td>
+<td>R0603</td>
+<td style="text-align: right;">9</td>
+<td>RC0603FR-07100RL</td>
+<td>Yageo</td>
+<td>LCSC</td>
+<td>C105588</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>10 kΩ</td>
+<td>R4-R5,R8,R10,R12,R14-R15,R17,R20</td>
+<td>R0603</td>
+<td style="text-align: right;">9</td>
+<td>RC0603FR-0710KL</td>
+<td>Yageo</td>
+<td>LCSC</td>
+<td>C98220</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>1.96 kΩ</td>
+<td>R21</td>
+<td>R0603</td>
+<td style="text-align: right;">1</td>
+<td>RC0603FR-071K96L</td>
+<td>Yageo</td>
+<td>LCSC</td>
+<td>C185352</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>1.2 kΩ</td>
+<td>R25</td>
+<td>R0402</td>
+<td style="text-align: right;">1</td>
+<td>ERJ2RKF1201X</td>
+<td>Panasonic</td>
+<td>LCSC</td>
+<td>C413082</td>
+<td style="text-align: right;">0.006</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>4.7 µF</td>
+<td>STPC1-STPC2</td>
+<td>C1206</td>
+<td style="text-align: right;">2</td>
+<td>1206B475K500NT</td>
+<td>FH</td>
+<td>LCSC</td>
+<td>C29823</td>
+<td style="text-align: right;">0.034</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>10 nF</td>
+<td>STPC3,STPC5</td>
+<td>C0603</td>
+<td style="text-align: right;">2</td>
+<td>0603B103K500NT</td>
+<td>FH</td>
+<td>LCSC</td>
+<td>C57112</td>
+<td style="text-align: right;">0.002</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>100 nF</td>
+<td>STPC4</td>
+<td>C0603</td>
+<td style="text-align: right;">1</td>
+<td>CC0603KRX7R9BB104</td>
+<td>Yageo</td>
+<td>LCSC</td>
+<td>C14663</td>
+<td style="text-align: right;">0.003</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>1 nF</td>
+<td>STPC6</td>
+<td>C0603</td>
+<td style="text-align: right;">1</td>
+<td>CL10B102KB8NNNC</td>
+<td>Samsung</td>
+<td>LCSC</td>
+<td>C1588</td>
+<td style="text-align: right;">0.003</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>47 pF</td>
+<td>STPC7</td>
+<td>C0603</td>
+<td style="text-align: right;">1</td>
+<td>CL10C470JB8NNNC</td>
+<td>Samsung</td>
+<td>LCSC</td>
+<td>C1671</td>
+<td style="text-align: right;">0.004</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>47 µF</td>
+<td>STPC8-STPC9</td>
+<td>C1206</td>
+<td style="text-align: right;">2</td>
+<td>CL31A476MPHNNNE</td>
+<td>Samsung</td>
+<td>LCSC</td>
+<td>C96123</td>
+<td style="text-align: right;">0.071</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td>Green LED</td>
+<td>STPLD1</td>
+<td>LED0603</td>
+<td style="text-align: right;">1</td>
+<td>19-217/GHC-YR1S2/3T</td>
+<td>Everlight</td>
+<td>LCSC</td>
+<td>C72043</td>
+<td style="text-align: right;">0.044</td>
 </tr>
 </tbody>
 </table>
