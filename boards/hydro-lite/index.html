@@ -648,9 +648,13 @@
 <p>A compact control board for automated hydroponic systems.<br />
 It drives <strong>eight 12 V nutrient-dosing pumps plus one 12 V master pump</strong>, letting you pre-mix before filling the reservoir.<br />
 No soldering is required—boards arrive fully assembled and electrically tested (sold on Amazon).</p>
-<p>!!! tip "Quick links"
-    * <a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">Schematic PDF</a>
-    * <a href="https://amazon.com/your-listing">Buy pre-assembled on Amazon</a> <em>(coming soon)</em></p>
+<div class="admonition tip">
+<p class="admonition-title">Quick links</p>
+<ul>
+<li><a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf">Schematic PDF</a></li>
+<li><a href="https://amazon.com/your-listing">Buy pre-assembled on Amazon</a> <em>(coming soon)</em></li>
+</ul>
+</div>
 <hr />
 <h2 id="features">Features</h2>
 <table>
@@ -681,24 +685,34 @@ No soldering is required—boards arrive fully assembled and electrically tested
 </table>
 <hr />
 <h2 id="schematic">Schematic</h2>
-<p>=== "Sheet 1"</p>
-<pre><code>[![Sheet 1](../images/hydro-lite/Sheet_1.png)](../hardware/hydro-lite/hydro-lite-schematic.pdf)
-</code></pre>
-<p>=== "Sheet 2"</p>
-<pre><code>[![Sheet 2](../images/hydro-lite/Sheet_2.png)](../hardware/hydro-lite/hydro-lite-schematic.pdf)
-</code></pre>
-<p>=== "Board overview"</p>
-<pre><code>[![Overview](../images/hydro-lite/SCH_Bosnia_small.png)](../hardware/hydro-lite/hydro-lite-schematic.pdf)
-</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Sheet 1</label><label for="__tabbed_1_2">Sheet 2</label><label for="__tabbed_1_3">Board overview</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf"><img alt="Sheet 1" src="../../images/hydro-lite/Sheet_1.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf"><img alt="Sheet 2" src="../../images/hydro-lite/Sheet_2.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../hardware/hydro-lite/hydro-lite-schematic.pdf"><img alt="Overview" src="../../images/hydro-lite/SCH_Bosnia_small.png" /></a></p>
+</div>
+</div>
+</div>
 <p><em>(Click any sheet for the full-resolution PDF.)</em></p>
 <hr />
 <h2 id="jumper-settings-i2c-pull-ups">Jumper Settings – I²C Pull-ups</h2>
-<p>!!! note "H1 / H2 pull-up jumpers"
-    * <strong>Purpose:</strong> adds 4 .7 kΩ pull-ups to <strong>SDA</strong> and <strong>SCL</strong>.<br />
-    * <strong>Use when:</strong><br />
-        * A sensor board <em>lacks</em> pull-ups, <strong>or</strong><br />
-        * Cable length &gt; 1 m.<br />
-    * Extra pull-ups sit <strong>in parallel</strong> with existing ones—safe for mixed devices.</p>
+<div class="admonition note">
+<p class="admonition-title">H1 / H2 pull-up jumpers</p>
+<ul>
+<li><strong>Purpose:</strong> adds 4 .7 kΩ pull-ups to <strong>SDA</strong> and <strong>SCL</strong>.  </li>
+<li><strong>Use when:</strong>  <ul>
+<li>A sensor board <em>lacks</em> pull-ups, <strong>or</strong>  </li>
+<li>Cable length &gt; 1 m.  </li>
+</ul>
+</li>
+<li>Extra pull-ups sit <strong>in parallel</strong> with existing ones—safe for mixed devices.</li>
+</ul>
+</div>
 <table>
 <thead>
 <tr>
