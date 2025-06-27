@@ -26,11 +26,19 @@ Everything in **Hydro Basic**, plus Pi power-backfeed and native Atlas Scientifi
 
 ## Schematic
 
-![Sheet 1](../images/hydro/Sheet_1.png)
-![Sheet 2](../images/hydro/Sheet_2.png)
-![Sheet 3](../images/hydro/Sheet_3.png)
+=== "Sheet 1"
 
-*(Click the image for the PDF.)*
+    [![Sheet 1](../images/hydro/Sheet_1.png)](../hardware/hydro/hydro-schematic-new.pdf)
+
+=== "Sheet 2"
+
+    [![Sheet 2](../images/hydro/Sheet_2.png)](../hardware/hydro/hydro-schematic-new.pdf)
+
+=== "Sheet 3"
+
+    [![Sheet 3](../images/hydro/Sheet_3.png)](../hardware/hydro/hydro-schematic-new.pdf)
+
+*(Click any sheet for the full-resolution PDF*
 
 ---
 
