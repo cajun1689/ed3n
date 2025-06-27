@@ -3,7 +3,7 @@
 Everything in **Hydro Basic**, plus Pi power-backfeed and native Atlas Scientific EZO™ support—ideal for growers upgrading from hobby probes to research-grade sensors.
 
 !!! tip "Quick links"
-    * **Schematic PDF** — [download](../hardware/hydro/hydro-schematic.pdf)
+    * **Schematic PDF** — [download](../hardware/hydro/hydro-schematic-new.pdf)
     * **Full BOM (CSV)** — [hardware/hydro/bom.csv](../hardware/hydro/bom.csv)
     * **Buy pre-assembled on Amazon** — *(listing coming soon)*
 

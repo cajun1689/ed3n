@@ -22,15 +22,19 @@ No soldering is required—boards arrive fully assembled and electrically tested
 
 ## Schematic
 
-!!! tabs
-    === "Sheet 1"
-        ![Sheet 1](../images/hydro-lite/Sheet_1.png)
-    === "Sheet 2"
-        ![Sheet 2](../images/hydro-lite/Sheet_2.png)
-    === "Board overview"
-        ![Board overview](../images/hydro-lite/SCH_Bosnia_small.png)
+=== "Sheet 1"
 
-*(Click the image for the full-resolution PDF.)*
+    [![Sheet 1](../images/hydro-lite/Sheet_1.png)](../hardware/hydro-lite/hydro-lite-schematic.pdf)
+
+=== "Sheet 2"
+
+    [![Sheet 2](../images/hydro-lite/Sheet_2.png)](../hardware/hydro-lite/hydro-lite-schematic.pdf)
+
+=== "Board overview"
+
+    [![Overview](../images/hydro-lite/SCH_Bosnia_small.png)](../hardware/hydro-lite/hydro-lite-schematic.pdf)
+
+*(Click any sheet for the full-resolution PDF.)*
 
 ---
 
